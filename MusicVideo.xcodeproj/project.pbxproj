@@ -14,6 +14,9 @@
 		DE491EE31CD9062300F60847 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE491EE11CD9062300F60847 /* LaunchScreen.storyboard */; };
 		DE491EEE1CD9062300F60847 /* MusicVideoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE491EED1CD9062300F60847 /* MusicVideoTests.swift */; };
 		DE491EF91CD9062300F60847 /* MusicVideoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE491EF81CD9062300F60847 /* MusicVideoUITests.swift */; };
+		DE491F0A1CD9147B00F60847 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE491F091CD9147B00F60847 /* APIManager.swift */; };
+		DE491F0B1CD9147B00F60847 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE491F091CD9147B00F60847 /* APIManager.swift */; };
+		DE491F0C1CD9147B00F60847 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE491F091CD9147B00F60847 /* APIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,7 @@
 		DE491EF41CD9062300F60847 /* MusicVideoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicVideoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE491EF81CD9062300F60847 /* MusicVideoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicVideoUITests.swift; sourceTree = "<group>"; };
 		DE491EFA1CD9062300F60847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE491F091CD9147B00F60847 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				DE491ED81CD9062300F60847 /* AppDelegate.swift */,
-				DE491F061CD9096200F60847 /* ViewControllers */,
+				DE491F0D1CD9148900F60847 /* Model */,
+				DE491F061CD9096200F60847 /* Controllers */,
 				DE491F071CD9097600F60847 /* View */,
 				DE491F081CD9099B00F60847 /* Support */,
 			);
@@ -123,12 +128,12 @@
 			path = MusicVideoUITests;
 			sourceTree = "<group>";
 		};
-		DE491F061CD9096200F60847 /* ViewControllers */ = {
+		DE491F061CD9096200F60847 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				DE491EDA1CD9062300F60847 /* ViewController.swift */,
 			);
-			name = ViewControllers;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		DE491F071CD9097600F60847 /* View */ = {
@@ -147,6 +152,14 @@
 				DE491EE41CD9062300F60847 /* Info.plist */,
 			);
 			name = Support;
+			sourceTree = "<group>";
+		};
+		DE491F0D1CD9148900F60847 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE491F091CD9147B00F60847 /* APIManager.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE491F0A1CD9147B00F60847 /* APIManager.swift in Sources */,
 				DE491EDB1CD9062300F60847 /* ViewController.swift in Sources */,
 				DE491ED91CD9062300F60847 /* AppDelegate.swift in Sources */,
 			);
@@ -289,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE491F0B1CD9147B00F60847 /* APIManager.swift in Sources */,
 				DE491EEE1CD9062300F60847 /* MusicVideoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE491F0C1CD9147B00F60847 /* APIManager.swift in Sources */,
 				DE491EF91CD9062300F60847 /* MusicVideoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
