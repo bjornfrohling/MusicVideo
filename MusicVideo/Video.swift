@@ -9,9 +9,18 @@
 import Foundation
 
 class Video {
-private var _name:String
-private var _imageUrl:String
-private var _videoUrl:String
+    
+    private var _name:String
+    private var _imageUrl:String
+    private var _videoUrl:String
+    private var _rights:String
+    private var _price:String
+    private var _artist:String
+    private var _artistId:String
+    private var _genre:String
+    private var _iTunesLink:String
+    private var _releaseDate:String
+    
 
     init(data:JSONDictionary) {
     
@@ -34,7 +43,7 @@ private var _videoUrl:String
             self._imageUrl = ""
         }
         
-        // Video url 
+        // Video url
         if let videoArray = data["link"] as? JSONArray,
         videoDict = videoArray[1] as? JSONDictionary,
         urlDict = videoDict["attributes"] as? JSONDictionary,
@@ -44,6 +53,81 @@ private var _videoUrl:String
         else {
             self._videoUrl = ""
         }
+        
+        // Song price
+        if let priceDict = data["im:price"] as? JSONDictionary,
+            price = priceDict["label"] as? String {
+            self._price = price
+        }
+        else {
+            self._price = "-"
+        }
+        
+        // The Studio Name
+        if let rightsDict = data["rights"] as? JSONDictionary,
+            rights = rightsDict["label"] as? String {
+            self._rights = rights
+        }
+        else
+        {
+            self._rights = "-"
+        }
+        
+        
+        // Artist Name
+        if let artistDict = data["im:artist"] as? JSONDictionary,
+            artist = artistDict["label"] as? String {
+            self._artist = artist
+        }
+        else
+        {
+            self._artist = "-"
+        }
+        
+        // Artist ID
+        if let imidDict = data["id"] as? JSONDictionary,
+            vidDict = imidDict["attributes"] as? JSONDictionary,
+            vImid = vidDict["im:id"] as? String {
+            self._artistId = vImid
+        }
+        else
+        {
+            self._artistId = ""
+        }
+        
+        // The Genre
+        if let genreDict = data["category"] as? JSONDictionary,
+            attriDict = genreDict["attributes"] as? JSONDictionary,
+            genre = attriDict["term"] as? String {
+            self._genre = genre
+        }
+        else
+        {
+            self._genre = ""
+        }
+        
+        // Video Link to iTunes
+        if let releaseDict = data["id"] as? JSONDictionary,
+            iTunesLink = releaseDict["label"] as? String {
+            self._iTunesLink = iTunesLink
+        }
+        else
+        {
+            self._iTunesLink = ""
+        }
+        
+        
+        // Release Date
+        if let releaseDict = data["im:releaseDate"] as? JSONDictionary,
+            attriDict = releaseDict["attributes"] as? JSONDictionary,
+            dateStr = attriDict["label"] as? String {
+            self._releaseDate = dateStr
+        }
+        else
+        {
+            self._releaseDate = ""
+        }
+        
     }
     
     var name: String {
@@ -58,4 +142,32 @@ private var _videoUrl:String
         return _videoUrl
     }
     
+    var price: String {
+        return _price
+    }
+    
+    var right: String {
+        return _rights
+    }
+    
+    var artist: String {
+        return _artist
+    }
+    
+    var artistId: String {
+        return _artistId
+    }
+    
+    var genre: String {
+        return _genre
+    }
+    
+    var iTunesLink: String {
+        return _iTunesLink
+    }
+
+    var releaseDate: String {
+        return _releaseDate
+    }
+
 }
