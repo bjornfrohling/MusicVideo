@@ -11,7 +11,7 @@ import Contacts
 
 class APIManager: NSObject {
 
-    func loadData(urlString:String, completion:(result:String)-> Void)  {
+    func loadData(urlString:String, completion:([Video])-> Void)  {
         
         let config = NSURLSessionConfiguration.ephemeralSessionConfiguration()
         let session = NSURLSession(configuration: config)
@@ -22,9 +22,7 @@ class APIManager: NSObject {
             (data, response, error)->Void in
             
             if error != nil {
-                dispatch_async(dispatch_get_main_queue(), {
-                    completion(result: (error!.localizedDescription))
-                })
+                    print(error!.localizedDescription)
             }
             else {
 
@@ -32,25 +30,34 @@ class APIManager: NSObject {
                 
                 do {
                 
-                    if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
-                        as? JSONDictionary {
-                        print(json)
+                    if let jsonDict = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
+                        as? JSONDictionary,
+                    feedDict = jsonDict["feed"] as? JSONDictionary,
+                    entriesArray = feedDict["entry"] as? JSONArray
+                    {
+                    
+                        var videos = [Video]()
+                        for entry in entriesArray {
+                            let video = Video(data: entry as! JSONDictionary)
+                            videos.append(video)
+                        }
+                        
+                        let videoCount = videos.count
+                        print("total video count \(videoCount)")
                         
                         let priority = DISPATCH_QUEUE_PRIORITY_HIGH
                         dispatch_async(dispatch_get_global_queue(priority, 0), {
                             
                             
                             dispatch_async(dispatch_get_main_queue(), {
-                                completion(result: "JSONSerialization Successful")
+                                completion(videos)
                             })
                         })
 
                     }
                 }
                 catch {
-                    dispatch_async(dispatch_get_main_queue(), {
-                        completion(result: "JSONSerialization error")
-                    })
+                        print("JSONSerialization error")
                 }
                 
             }

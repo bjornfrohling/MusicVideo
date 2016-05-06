@@ -21,7 +21,8 @@ class Video {
     private var _iTunesLink:String
     private var _releaseDate:String
     
-
+    var imageData:NSData?
+    
     init(data:JSONDictionary) {
     
         // Video name
@@ -127,7 +128,6 @@ class Video {
         {
             self._releaseDate = ""
         }
-        
     }
     
     var name: String {
@@ -169,5 +169,4 @@ class Video {
     var releaseDate: String {
         return _releaseDate
     }
-
 }

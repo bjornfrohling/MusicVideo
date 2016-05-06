@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     var url:String = "https://itunes.apple.com/us/rss/topmusicvideos/limit=10/json"
-    
+    var videos = [Video]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,21 +19,16 @@ class ViewController: UIViewController {
         // Call API
         let api = APIManager()
         api.loadData(url, completion: didLoadData)
-        
     }
 
-    func didLoadData(result:String) {
+    func didLoadData(videos:[Video]) {
 
-        let alert = UIAlertController(title: (result), message: nil, preferredStyle: .Alert)
-        
-        let okAction = UIAlertAction(title: "Ok", style: .Default) { action -> Void in
-            // no action required
+        self.videos = videos
+  
+        for (index, item) in videos.enumerate() {
+            print("name = \(item.name) index = \(index)")
+
         }
-        
-        alert.addAction(okAction)
-        self.presentViewController(alert, animated: true, completion: nil)
-        
     }
-
 }
 
