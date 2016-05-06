@@ -10,17 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var label: UILabel!
+    
     var url:String = "https://itunes.apple.com/us/rss/topmusicvideos/limit=10/json"
     var videos = [Video]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "reachabilityStatusChanged", name: "ReachStatusChanged", object: nil)
+        
         // Call API
         let api = APIManager()
         api.loadData(url, completion: didLoadData)
         
-        print(reachabilityStatus)
+        reachabilityStatusChanged()
     }
 
     func didLoadData(videos:[Video]) {
@@ -32,5 +36,24 @@ class ViewController: UIViewController {
 
         }
     }
-}
+    
+    func reachabilityStatusChanged() -> Void {
+        switch reachabilityStatus {
+        case NOACCESS:
+            view.backgroundColor = UIColor.redColor()
+        case WIFI:
+            view.backgroundColor = UIColor.greenColor()
+        case WWAN:
+            view.backgroundColor = UIColor.yellowColor()
+        default:
+            return
+        }
+        
+        label.text = reachabilityStatus
+    }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+} // end class
 

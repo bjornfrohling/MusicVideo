@@ -109,9 +109,9 @@
 		DE491ED71CD9062300F60847 /* MusicVideo */ = {
 			isa = PBXGroup;
 			children = (
+				DE491ED81CD9062300F60847 /* AppDelegate.swift */,
 				DEEE20711CDD017500BF675B /* ObjC */,
 				DE9DEEE71CDB87FE00F0552F /* Utils */,
-				DE491ED81CD9062300F60847 /* AppDelegate.swift */,
 				DE491F0D1CD9148900F60847 /* Model */,
 				DE491F061CD9096200F60847 /* Controllers */,
 				DE491F071CD9097600F60847 /* View */,
@@ -184,8 +184,8 @@
 		DEEE20711CDD017500BF675B /* ObjC */ = {
 			isa = PBXGroup;
 			children = (
-				DEEE20731CDD01D800BF675B /* Reachability.m */,
 				DEEE20741CDD01D800BF675B /* Reachability.h */,
+				DEEE20731CDD01D800BF675B /* Reachability.m */,
 				DEEE20721CDD01D700BF675B /* MusicVideo-Bridging-Header.h */,
 			);
 			name = ObjC;
