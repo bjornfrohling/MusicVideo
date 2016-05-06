@@ -19,6 +19,8 @@ class ViewController: UIViewController {
         // Call API
         let api = APIManager()
         api.loadData(url, completion: didLoadData)
+        
+        print(reachabilityStatus)
     }
 
     func didLoadData(videos:[Video]) {

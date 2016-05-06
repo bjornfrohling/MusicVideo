@@ -8,14 +8,22 @@
 
 import UIKit
 
+var reachability : Reachability?
+var reachabilityStatus : String = WIFI
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var internetCheck : Reachability?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
+        // Add Observer for connectivity
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "reachabilityChanged:", name: kReachabilityChangedNotification, object: nil)
+        reachability = Reachability.reachabilityForInternetConnection()
+        reachability?.startNotifier()
+        
         return true
     }
 
@@ -38,9 +46,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillTerminate(application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
-
-
-}
+    
+    func reachabilityChanged(notification: NSNotification) -> Void {
+        reachability = notification.object as? Reachability
+        statusChangedWithReachability(reachability!)
+    }
+    
+    func statusChangedWithReachability(reachability : Reachability) -> Void {
+        let networkStatus : NetworkStatus = reachability.currentReachabilityStatus()
+        
+        switch networkStatus.rawValue {
+        case NotReachable.rawValue:
+            reachabilityStatus = NOACCESS
+        case ReachableViaWiFi.rawValue:
+            reachabilityStatus = WIFI
+        case ReachableViaWWAN.rawValue:
+            reachabilityStatus = WWAN
+        default:
+            return
+        }
+        
+        NSNotificationCenter.defaultCenter().postNotificationName("ReachStatusChanged", object: nil)
+    }
+} // end class
 
