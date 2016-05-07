@@ -10,6 +10,7 @@ import Foundation
 
 class Video {
     
+    var rank:Int = 0
     private var _name:String
     private var _imageUrl:String
     private var _videoUrl:String

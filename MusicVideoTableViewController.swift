@@ -10,7 +10,7 @@ import UIKit
 
 class MusicVideoTableViewController: UITableViewController {
 
-    var url:String = "https://itunes.apple.com/us/rss/topmusicvideos/limit=50/json"
+    var url:String = "https://itunes.apple.com/us/rss/topmusicvideos/limit=200/json"
     var videos = [Video]()
     
     override func viewDidLoad() {
@@ -90,11 +90,11 @@ class MusicVideoTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as? VideoTableViewCell
         let video = self.videos[indexPath.row]
-        cell.textLabel!.text = ("\(indexPath.row + 1)")
-        cell.detailTextLabel?.text = video.name
-        return cell
+        cell?.topLabel?.text = ("\(indexPath.row + 1)")
+        cell?.bottomLabel?.text = video.name
+        return cell!
     }
  
 

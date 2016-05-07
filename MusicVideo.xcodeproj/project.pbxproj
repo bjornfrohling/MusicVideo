@@ -19,6 +19,7 @@
 		DE9DEEE91CDB881E00F0552F /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9DEEE81CDB881E00F0552F /* Contants.swift */; };
 		DE9DEEEB1CDB8A2700F0552F /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9DEEEA1CDB8A2700F0552F /* Video.swift */; };
 		DECB568A1CDE6039009117EB /* MusicVideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECB56891CDE6039009117EB /* MusicVideoTableViewController.swift */; };
+		DECB568D1CDE6CEF009117EB /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECB568C1CDE6CEF009117EB /* VideoTableViewCell.swift */; };
 		DEEE20751CDD01D800BF675B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEE20731CDD01D800BF675B /* Reachability.m */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		DE9DEEE81CDB881E00F0552F /* Contants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
 		DE9DEEEA1CDB8A2700F0552F /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		DECB56891CDE6039009117EB /* MusicVideoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		DECB568C1CDE6CEF009117EB /* VideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		DEEE20721CDD01D700BF675B /* MusicVideo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicVideo-Bridging-Header.h"; sourceTree = "<group>"; };
 		DEEE20731CDD01D800BF675B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		DEEE20741CDD01D800BF675B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				DE491ED81CD9062300F60847 /* AppDelegate.swift */,
 				DEEE20711CDD017500BF675B /* ObjC */,
 				DE9DEEE71CDB87FE00F0552F /* Utils */,
+				DECB568B1CDE6B10009117EB /* Service */,
 				DE491F0D1CD9148900F60847 /* Model */,
 				DE491F061CD9096200F60847 /* Controllers */,
 				DE491F071CD9097600F60847 /* View */,
@@ -142,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				DECB56891CDE6039009117EB /* MusicVideoTableViewController.swift */,
+				DECB568C1CDE6CEF009117EB /* VideoTableViewCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -167,7 +171,6 @@
 		DE491F0D1CD9148900F60847 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DE491F091CD9147B00F60847 /* APIManager.swift */,
 				DE9DEEEA1CDB8A2700F0552F /* Video.swift */,
 			);
 			name = Model;
@@ -179,6 +182,14 @@
 				DE9DEEE81CDB881E00F0552F /* Contants.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		DECB568B1CDE6B10009117EB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DE491F091CD9147B00F60847 /* APIManager.swift */,
+			);
+			name = Service;
 			sourceTree = "<group>";
 		};
 		DEEE20711CDD017500BF675B /* ObjC */ = {
@@ -324,6 +335,7 @@
 			files = (
 				DE491F0A1CD9147B00F60847 /* APIManager.swift in Sources */,
 				DE491ED91CD9062300F60847 /* AppDelegate.swift in Sources */,
+				DECB568D1CDE6CEF009117EB /* VideoTableViewCell.swift in Sources */,
 				DECB568A1CDE6039009117EB /* MusicVideoTableViewController.swift in Sources */,
 				DE9DEEE91CDB881E00F0552F /* Contants.swift in Sources */,
 				DEEE20751CDD01D800BF675B /* Reachability.m in Sources */,

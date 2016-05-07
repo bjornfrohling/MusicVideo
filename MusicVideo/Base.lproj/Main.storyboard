@@ -3,40 +3,63 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Music Video Table View Controller-->
         <scene sceneID="tFk-b9-98g">
             <objects>
                 <tableViewController id="eKI-Yi-uu8" customClass="MusicVideoTableViewController" customModule="MusicVideo" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5QM-Tf-NTR">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" id="5QM-Tf-NTR">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="bcW-Ap-W9J" detailTextLabel="FDV-vp-Y76" style="IBUITableViewCellStyleSubtitle" id="0qU-ZC-cwr">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="75" id="0qU-ZC-cwr" customClass="VideoTableViewCell" customModule="MusicVideo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0qU-ZC-cwr" id="6Nk-JP-BwK">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="74.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bcW-Ap-W9J">
-                                            <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eWM-R9-7Uf">
+                                            <rect key="frame" x="8" y="8" width="58" height="58"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="58" id="MUL-y5-Z0p"/>
+                                                <constraint firstAttribute="height" constant="58" id="jfp-N2-8ob"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHW-ty-AyG">
+                                            <rect key="frame" x="74" y="8" width="518" height="25"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FDV-vp-Y76">
-                                            <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PN5-HA-IBi">
+                                            <rect key="frame" x="74" y="35" width="518" height="17"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="PN5-HA-IBi" firstAttribute="trailing" secondItem="6Nk-JP-BwK" secondAttribute="trailingMargin" id="8Eq-d5-2Xa"/>
+                                        <constraint firstItem="PN5-HA-IBi" firstAttribute="leading" secondItem="eWM-R9-7Uf" secondAttribute="trailing" constant="8" id="F1e-gh-Lae"/>
+                                        <constraint firstItem="eWM-R9-7Uf" firstAttribute="top" secondItem="6Nk-JP-BwK" secondAttribute="topMargin" id="IAb-En-8At"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="PN5-HA-IBi" secondAttribute="bottom" constant="14.5" id="LSC-c4-si5"/>
+                                        <constraint firstItem="gHW-ty-AyG" firstAttribute="leading" secondItem="eWM-R9-7Uf" secondAttribute="trailing" constant="8" id="T0o-9t-5Zu"/>
+                                        <constraint firstItem="gHW-ty-AyG" firstAttribute="top" secondItem="6Nk-JP-BwK" secondAttribute="topMargin" id="lVL-Qh-hEG"/>
+                                        <constraint firstItem="gHW-ty-AyG" firstAttribute="trailing" secondItem="6Nk-JP-BwK" secondAttribute="trailingMargin" id="paZ-PE-bgk"/>
+                                        <constraint firstItem="PN5-HA-IBi" firstAttribute="top" secondItem="gHW-ty-AyG" secondAttribute="bottom" constant="2" id="szQ-la-xqi"/>
+                                        <constraint firstItem="eWM-R9-7Uf" firstAttribute="leading" secondItem="6Nk-JP-BwK" secondAttribute="leadingMargin" id="uQR-vU-3KT"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bottomLabel" destination="PN5-HA-IBi" id="SYC-Iy-0et"/>
+                                    <outlet property="topLabel" destination="gHW-ty-AyG" id="3iM-so-Vf0"/>
+                                    <outlet property="videoImage" destination="eWM-R9-7Uf" id="AFX-Sk-kdR"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
