@@ -8,11 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var label: UILabel!
     
-    var url:String = "https://itunes.apple.com/us/rss/topmusicvideos/limit=10/json"
+    var url:String = "https://itunes.apple.com/us/rss/topmusicvideos/limit=50/json"
     var videos = [Video]()
     
     override func viewDidLoad() {
@@ -31,11 +32,7 @@ class ViewController: UIViewController {
     func didLoadData(videos:[Video]) {
 
         self.videos = videos
-  
-        for (index, item) in videos.enumerate() {
-            print("name = \(item.name) index = \(index)")
-
-        }
+        self.tableView.reloadData()
     }
     
     func reachabilityStatusChanged() -> Void {
@@ -56,5 +53,23 @@ class ViewController: UIViewController {
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
+    
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return videos.count;
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1;
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+        let video = self.videos[indexPath.row]
+        cell.textLabel!.text = ("\(indexPath.row + 1)")
+        cell.detailTextLabel?.text = video.name
+        return cell
+    }
+
 } // end class
 
