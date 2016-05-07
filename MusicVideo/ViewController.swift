@@ -18,13 +18,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Add listener for connectivity
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "reachabilityStatusChanged", name: "ReachStatusChanged", object: nil)
-        
+        reachabilityStatusChanged()
+
         // Call API
         let api = APIManager()
         api.loadData(url, completion: didLoadData)
         
-        reachabilityStatusChanged()
     }
 
     func didLoadData(videos:[Video]) {
