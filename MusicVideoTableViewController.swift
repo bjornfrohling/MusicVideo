@@ -18,12 +18,14 @@ class MusicVideoTableViewController: UITableViewController {
         
         // Add listener for connectivity
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MusicVideoTableViewController.reachabilityStatusChanged), name: "ReachStatusChanged", object: nil)
+        
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
         reachabilityStatusChanged()
-        
-        // Call API
-        let api = APIManager()
-        api.loadData(url, completion: didLoadData)
-        
     }
     
     func didLoadData(videos:[Video]) {
@@ -36,14 +38,38 @@ class MusicVideoTableViewController: UITableViewController {
         switch reachabilityStatus {
         case NOACCESS:
             view.backgroundColor = UIColor.redColor()
+            // Create User Alert
+            let alert = UIAlertController(title: "No Internet Access", message: "Check your internet connectivity", preferredStyle: .Alert)
+            let okAction = UIAlertAction(title: "Ok", style: .Default, handler: { (UIAlertAction) in
+                print("Ok action")
+            })
+            let cancelAction = UIAlertAction(title: "Cancel", style: .Default, handler: { (UIAlertAction) in
+                print("cancel action")
+            })
+            let deleteAction = UIAlertAction(title: "Delete", style: .Destructive, handler: { (UIAlertAction) in
+                print("delete action")
+            })
+            alert.addAction(okAction)
+            alert.addAction(cancelAction)
+            alert.addAction(deleteAction)
+            self.presentViewController(alert, animated: true, completion: {})
+            break
         case WIFI:
             view.backgroundColor = UIColor.greenColor()
+            break
         case WWAN:
             view.backgroundColor = UIColor.yellowColor()
-        default:
-            return
+            break
+        default: break
         }
         
+        runApi()
+    }
+    
+    func runApi()  {
+        // Call API
+        let api = APIManager()
+        api.loadData(url, completion: didLoadData)
     }
     
     deinit {
