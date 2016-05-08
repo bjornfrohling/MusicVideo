@@ -39,7 +39,7 @@ class APIManager: NSObject {
                         var videos = [Video]()
                         for (index, entry) in entriesArray.enumerate() {
                             let video = Video(data: entry as! JSONDictionary)
-                            video.rank = index
+                            video.rank = index + 1
                             videos.append(video)
                         }
                         

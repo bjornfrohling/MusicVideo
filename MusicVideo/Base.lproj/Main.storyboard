@@ -31,13 +31,13 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHW-ty-AyG">
-                                            <rect key="frame" x="74" y="8" width="518" height="25"/>
+                                            <rect key="frame" x="74" y="8" width="518" height="19.5"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PN5-HA-IBi">
-                                            <rect key="frame" x="74" y="35" width="518" height="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PN5-HA-IBi">
+                                            <rect key="frame" x="74" y="29.5" width="518" height="17"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -47,7 +47,7 @@
                                         <constraint firstItem="PN5-HA-IBi" firstAttribute="trailing" secondItem="6Nk-JP-BwK" secondAttribute="trailingMargin" id="8Eq-d5-2Xa"/>
                                         <constraint firstItem="PN5-HA-IBi" firstAttribute="leading" secondItem="eWM-R9-7Uf" secondAttribute="trailing" constant="8" id="F1e-gh-Lae"/>
                                         <constraint firstItem="eWM-R9-7Uf" firstAttribute="top" secondItem="6Nk-JP-BwK" secondAttribute="topMargin" id="IAb-En-8At"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="PN5-HA-IBi" secondAttribute="bottom" constant="14.5" id="LSC-c4-si5"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="PN5-HA-IBi" secondAttribute="bottom" priority="250" constant="14.5" id="LSC-c4-si5"/>
                                         <constraint firstItem="gHW-ty-AyG" firstAttribute="leading" secondItem="eWM-R9-7Uf" secondAttribute="trailing" constant="8" id="T0o-9t-5Zu"/>
                                         <constraint firstItem="gHW-ty-AyG" firstAttribute="top" secondItem="6Nk-JP-BwK" secondAttribute="topMargin" id="lVL-Qh-hEG"/>
                                         <constraint firstItem="gHW-ty-AyG" firstAttribute="trailing" secondItem="6Nk-JP-BwK" secondAttribute="trailingMargin" id="paZ-PE-bgk"/>
