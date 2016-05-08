@@ -32,8 +32,28 @@ class VideoTableViewCell: UITableViewCell {
     func updateCell()  {
         topLabel.text = ("\(video!.rank)")
         bottomLabel.text = video?.name
-        videoImage.image = UIImage(named: "default-placeholder")
+        if video!.imageData != nil {
+            videoImage.image = UIImage(data: video!.imageData!)
+        }
+        else {
+            videoImage.image = UIImage(named: "default-placeholder")
+           getVideoImage(video!, imageView: videoImage)
+        }
         
     }
-
+    
+    func getVideoImage(video:Video, imageView:UIImageView)  {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { 
+            let imgData = NSData(contentsOfURL: NSURL(string: video.imageUrl)!)
+            var image: UIImage?
+            if imgData != nil {
+                video.imageData = imgData
+                image = UIImage(data: imgData!)
+            }
+            
+            dispatch_async(dispatch_get_main_queue()) {
+                imageView.image = image
+            }
+        }
+    }
 }
