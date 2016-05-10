@@ -30,6 +30,9 @@ class VideoTableViewCell: UITableViewCell {
     }
     
     func updateCell()  {
+        topLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
+        bottomLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
+        
         topLabel.text = ("\(video!.rank)")
         bottomLabel.text = video?.name
         if video!.imageData != nil {
@@ -56,4 +59,5 @@ class VideoTableViewCell: UITableViewCell {
             }
         }
     }
-}
+
+} // end class

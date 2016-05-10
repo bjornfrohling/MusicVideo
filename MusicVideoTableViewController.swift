@@ -19,7 +19,16 @@ class MusicVideoTableViewController: UITableViewController {
         // Add listener for connectivity
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MusicVideoTableViewController.reachabilityStatusChanged), name: "ReachStatusChanged", object: nil)
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(MusicVideoTableViewController.fontHasChanged) , name: UIContentSizeCategoryDidChangeNotification, object: nil)
         
+        tableView.estimatedRowHeight = 44.0
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
+    }
+    
+    func fontHasChanged() -> Void  {
+        print("font has changed")
+        tableView.reloadData()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -98,5 +107,7 @@ class MusicVideoTableViewController: UITableViewController {
 
         return cell!
     }
+    
+    
  
 }
