@@ -16,6 +16,7 @@
 		DE491F0A1CD9147B00F60847 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE491F091CD9147B00F60847 /* APIManager.swift */; };
 		DE491F0B1CD9147B00F60847 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE491F091CD9147B00F60847 /* APIManager.swift */; };
 		DE491F0C1CD9147B00F60847 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE491F091CD9147B00F60847 /* APIManager.swift */; };
+		DE4D186A1CE24E6100198D3A /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4D18691CE24E6100198D3A /* DetailsViewController.swift */; };
 		DE9DEEE91CDB881E00F0552F /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9DEEE81CDB881E00F0552F /* Contants.swift */; };
 		DE9DEEEB1CDB8A2700F0552F /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9DEEEA1CDB8A2700F0552F /* Video.swift */; };
 		DECB568A1CDE6039009117EB /* MusicVideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECB56891CDE6039009117EB /* MusicVideoTableViewController.swift */; };
@@ -54,6 +55,7 @@
 		DE491EF81CD9062300F60847 /* MusicVideoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicVideoUITests.swift; sourceTree = "<group>"; };
 		DE491EFA1CD9062300F60847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE491F091CD9147B00F60847 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		DE4D18691CE24E6100198D3A /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		DE9DEEE81CDB881E00F0552F /* Contants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
 		DE9DEEEA1CDB8A2700F0552F /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		DECB56891CDE6039009117EB /* MusicVideoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoTableViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -146,6 +148,7 @@
 			children = (
 				DECB56891CDE6039009117EB /* MusicVideoTableViewController.swift */,
 				DECB568C1CDE6CEF009117EB /* VideoTableViewCell.swift */,
+				DE4D18691CE24E6100198D3A /* DetailsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				DE491F0A1CD9147B00F60847 /* APIManager.swift in Sources */,
 				DE491ED91CD9062300F60847 /* AppDelegate.swift in Sources */,
 				DECB568D1CDE6CEF009117EB /* VideoTableViewCell.swift in Sources */,
+				DE4D186A1CE24E6100198D3A /* DetailsViewController.swift in Sources */,
 				DECB568A1CDE6039009117EB /* MusicVideoTableViewController.swift in Sources */,
 				DE9DEEE91CDB881E00F0552F /* Contants.swift in Sources */,
 				DEEE20751CDD01D800BF675B /* Reachability.m in Sources */,

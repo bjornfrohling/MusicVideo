@@ -86,7 +86,6 @@ class MusicVideoTableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -107,7 +106,4 @@ class MusicVideoTableViewController: UITableViewController {
 
         return cell!
     }
-    
-    
- 
 }
