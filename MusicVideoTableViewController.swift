@@ -46,7 +46,6 @@ class MusicVideoTableViewController: UITableViewController {
     func reachabilityStatusChanged() -> Void {
         switch reachabilityStatus {
         case NOACCESS:
-            view.backgroundColor = UIColor.redColor()
             // Create User Alert
             let alert = UIAlertController(title: "No Internet Access", message: "Check your internet connectivity", preferredStyle: .Alert)
             let okAction = UIAlertAction(title: "Ok", style: .Default, handler: { (UIAlertAction) in
@@ -64,10 +63,8 @@ class MusicVideoTableViewController: UITableViewController {
             self.presentViewController(alert, animated: true, completion: {})
             break
         case WIFI:
-            view.backgroundColor = UIColor.greenColor()
             break
         case WWAN:
-            view.backgroundColor = UIColor.yellowColor()
             break
         default: break
         }
@@ -98,6 +95,7 @@ class MusicVideoTableViewController: UITableViewController {
 
     private struct storyboardId {
         static let cellId = "cell"
+        static let detailsSegue = "DetailViewController"
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -105,5 +103,18 @@ class MusicVideoTableViewController: UITableViewController {
         cell?.video = self.videos[indexPath.row]
 
         return cell!
+    }
+    
+    // MARK: - Navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+
+        if segue.identifier == storyboardId.detailsSegue {
+            
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let video = videos[indexPath.row]
+                let dvc = segue.destinationViewController as! DetailsViewController
+                dvc.video = video
+            }
+        }
     }
 }
