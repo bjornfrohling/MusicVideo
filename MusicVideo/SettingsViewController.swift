@@ -30,6 +30,12 @@ class SettingsViewController: UITableViewController {
         let defaults = NSUserDefaults.standardUserDefaults()
         self.securitySwitch.on = defaults.boolForKey("securitySwitch")
         self.imageQualitySwitch.on = defaults.boolForKey("qualitySwitch")
+        
+        if defaults.objectForKey("apiSlider") != nil {
+            let value = defaults.objectForKey("apiSlider") as! Int
+            self.apiCountLabel.text = "\(value)"
+            self.slider.value = Float(value)
+        }
     }
     
     deinit {
@@ -44,7 +50,6 @@ class SettingsViewController: UITableViewController {
         self.apiCountLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
     }
 
-    
     @IBAction func securitySwitchDidChange(sender: AnyObject) {
         print("securitySwitchDidChange")
         let defaults = NSUserDefaults.standardUserDefaults()
@@ -55,6 +60,14 @@ class SettingsViewController: UITableViewController {
         print("imageQualitySwitchDidChange")
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setBool(imageQualitySwitch.on, forKey: "qualitySwitch")
+    }
+    
+    @IBAction func apiSliderChanged(sender: AnyObject) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        print("slider \(slider.value)")
+        let value = Int(slider.value)
+        defaults.setObject(value, forKey: "apiSlider")
+        apiCountLabel.text = "\(value)"
     }
  
 } // end class
