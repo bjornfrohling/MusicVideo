@@ -22,8 +22,14 @@ class SettingsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.title = "Settings"
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(SettingsViewController.fontHasChanged) , name: UIContentSizeCategoryDidChangeNotification, object: nil)
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        self.securitySwitch.on = defaults.boolForKey("securitySwitch")
+        self.imageQualitySwitch.on = defaults.boolForKey("qualitySwitch")
     }
     
     deinit {
@@ -38,5 +44,17 @@ class SettingsViewController: UITableViewController {
         self.apiCountLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
     }
 
+    
+    @IBAction func securitySwitchDidChange(sender: AnyObject) {
+        print("securitySwitchDidChange")
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setBool(securitySwitch.on, forKey: "securitySwitch")
+    }
+
+    @IBAction func imageQualitySwitchDidChange(sender: AnyObject) {
+        print("imageQualitySwitchDidChange")
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setBool(imageQualitySwitch.on, forKey: "qualitySwitch")
+    }
  
 } // end class
