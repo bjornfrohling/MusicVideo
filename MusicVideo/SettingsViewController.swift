@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class SettingsViewController: UITableViewController {
+class SettingsViewController: UITableViewController, MFMailComposeViewControllerDelegate {
 
     
     @IBOutlet weak var aboutLabel: UILabel!
@@ -69,5 +70,40 @@ class SettingsViewController: UITableViewController {
         defaults.setObject(value, forKey: "apiSlider")
         apiCountLabel.text = "\(value)"
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.section == 0 && indexPath.row == 1 {
+            presentMail()
+        }
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
+    func presentMail() {
+        let mailComposeVC : MFMailComposeViewController = MFMailComposeViewController()
+        mailComposeVC.mailComposeDelegate = self
+        mailComposeVC.setSubject("App Feedback")
+        mailComposeVC.setToRecipients(["test@test.com"])
+        mailComposeVC.setMessageBody("Hi, I would like to share some feedback with you.\n\n", isHTML: false)
+        
+        if MFMailComposeViewController.canSendMail() {
+            self.presentViewController(mailComposeVC, animated: true) {
+                print("did present mail controller")
+            }
+        }
+        else {
+            print("Mail app is not set up!")
+        }
+
+    }
  
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+        print("mailComposeController did finish with result \(result)")
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 } // end class
+
+
+
+
+
