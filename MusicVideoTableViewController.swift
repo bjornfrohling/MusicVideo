@@ -10,8 +10,9 @@ import UIKit
 
 class MusicVideoTableViewController: UITableViewController {
 
-    var url:String = "https://itunes.apple.com/us/rss/topmusicvideos/limit=200/json"
     var videos = [Video]()
+    var queryLimit = 10
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,9 +74,21 @@ class MusicVideoTableViewController: UITableViewController {
     }
     
     func runApi()  {
+        // Get API query limit
+        apiQueryCount()
+        
+        // Set nav bar title
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.darkGrayColor()]
+        title = "iTunes Top \(queryLimit)"
+        
         // Call API
         let api = APIManager()
-        api.loadData(url, completion: didLoadData)
+        api.loadData("https://itunes.apple.com/us/rss/topmusicvideos/limit=\(queryLimit)/json", completion: didLoadData)
+        
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "E, dd MMM yyyy HH:mm:ss"
+        let refreshDate = formatter.stringFromDate(NSDate())
+        refreshControl?.attributedTitle = NSAttributedString(string: "\(refreshDate)")
     }
     
     deinit {
@@ -117,4 +130,28 @@ class MusicVideoTableViewController: UITableViewController {
             }
         }
     }
+    
+    @IBAction func refresh(sender: UIRefreshControl) {
+        refreshControl?.endRefreshing()
+        runApi()
+    }
+    
+    
+    func apiQueryCount ()  {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if defaults.objectForKey("apiSlider") != nil {
+            queryLimit = defaults.objectForKey("apiSlider") as! Int
+        }
+        else {
+            queryLimit = 10
+        }
+    }
 }
+
+
+
+
+
+
+
+

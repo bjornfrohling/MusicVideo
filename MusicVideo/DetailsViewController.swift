@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AVFoundation
+import AVKit
 
 class DetailsViewController: UIViewController {
 
@@ -35,4 +37,31 @@ class DetailsViewController: UIViewController {
         }
     }
 
+    @IBAction func didSelectPlayButton(sender: AnyObject) {
+        print(didSelectPlayButton)
+        let url = NSURL(string: video.videoUrl)!
+        let player = AVPlayer(URL:url)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        
+        self.presentViewController(playerViewController, animated: true, completion: { playerViewController.player?.play()})
+    }
+
+    @IBAction func didSelectMoreActionsButton(sender: AnyObject) {
+        print(didSelectMoreActionsButton)
+        
+    }
+
 } // end class
+
+
+
+
+
+
+
+
+
+
+
+
