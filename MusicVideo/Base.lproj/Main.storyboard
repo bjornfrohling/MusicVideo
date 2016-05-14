@@ -59,7 +59,7 @@
                                     <outlet property="bottomLabel" destination="PN5-HA-IBi" id="SYC-Iy-0et"/>
                                     <outlet property="topLabel" destination="gHW-ty-AyG" id="3iM-so-Vf0"/>
                                     <outlet property="videoImage" destination="eWM-R9-7Uf" id="AFX-Sk-kdR"/>
-                                    <segue destination="j4i-ad-Rgj" kind="show" identifier="DetailViewController" id="bFQ-b2-qXE"/>
+                                    <segue destination="j4i-ad-Rgj" kind="show" identifier="DetailsViewController" id="bFQ-b2-qXE"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -342,7 +342,7 @@
         <!--Details View Controller-->
         <scene sceneID="MBM-v3-65R">
             <objects>
-                <viewController id="j4i-ad-Rgj" customClass="DetailsViewController" customModule="MusicVideo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailsViewController" id="j4i-ad-Rgj" customClass="DetailsViewController" customModule="MusicVideo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vx4-S6-h2k"/>
                         <viewControllerLayoutGuide type="bottom" id="Qtn-Tu-DuH"/>
@@ -381,34 +381,12 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o7f-DL-tst">
-                                <rect key="frame" x="0.0" y="512" width="600" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="NSc-5U-ENp"/>
-                                </constraints>
-                                <items>
-                                    <barButtonItem systemItem="play" id="4JZ-dK-MQ8">
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <action selector="didSelectPlayButton:" destination="j4i-ad-Rgj" id="rr4-3D-s0b"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="AbM-tr-JF5"/>
-                                    <barButtonItem systemItem="action" id="5WF-VA-jx5">
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <action selector="didSelectMoreActionsButton:" destination="j4i-ad-Rgj" id="ZqA-tI-kS2"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Qtn-Tu-DuH" firstAttribute="top" secondItem="o7f-DL-tst" secondAttribute="bottom" id="00J-Cr-dYw"/>
-                            <constraint firstItem="o7f-DL-tst" firstAttribute="leading" secondItem="Tz0-GJ-XsH" secondAttribute="leading" id="3AT-8C-nEN"/>
                             <constraint firstItem="EOW-dd-FqK" firstAttribute="leading" secondItem="Tz0-GJ-XsH" secondAttribute="leading" constant="20" id="7n6-11-kyg"/>
                             <constraint firstItem="Kl3-ij-d1f" firstAttribute="leading" secondItem="Tz0-GJ-XsH" secondAttribute="leading" constant="20" id="CQu-IH-5if"/>
+                            <constraint firstItem="Qtn-Tu-DuH" firstAttribute="top" secondItem="Hox-9Z-oI8" secondAttribute="bottom" constant="54" id="CRY-WA-ogh"/>
                             <constraint firstAttribute="trailing" secondItem="Hox-9Z-oI8" secondAttribute="trailing" constant="20" id="HHI-s3-oCE"/>
                             <constraint firstItem="73D-xT-M3d" firstAttribute="top" secondItem="Vx4-S6-h2k" secondAttribute="bottom" constant="52" id="Jq0-wG-jtm"/>
                             <constraint firstAttribute="trailing" secondItem="EOW-dd-FqK" secondAttribute="trailing" constant="20" id="KfO-dU-hkd"/>
@@ -416,17 +394,14 @@
                             <constraint firstItem="EOW-dd-FqK" firstAttribute="top" secondItem="73D-xT-M3d" secondAttribute="bottom" constant="10" id="RIt-yX-Rnj"/>
                             <constraint firstItem="kT6-dv-jiK" firstAttribute="leading" secondItem="Tz0-GJ-XsH" secondAttribute="leadingMargin" id="Tet-JT-pLv"/>
                             <constraint firstItem="Hox-9Z-oI8" firstAttribute="leading" secondItem="Tz0-GJ-XsH" secondAttribute="leading" constant="20" id="Ugj-vS-M3V"/>
-                            <constraint firstItem="o7f-DL-tst" firstAttribute="top" secondItem="73D-xT-M3d" secondAttribute="bottom" id="Y6l-lF-6cl"/>
                             <constraint firstAttribute="trailing" secondItem="Kl3-ij-d1f" secondAttribute="trailing" constant="20" id="a7D-Vq-nEW"/>
                             <constraint firstItem="Kl3-ij-d1f" firstAttribute="top" secondItem="EOW-dd-FqK" secondAttribute="bottom" constant="10" id="biZ-p9-5Kw"/>
-                            <constraint firstItem="o7f-DL-tst" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Hox-9Z-oI8" secondAttribute="bottom" constant="10" id="bre-RY-7jH"/>
                             <constraint firstItem="Hox-9Z-oI8" firstAttribute="top" secondItem="Kl3-ij-d1f" secondAttribute="bottom" constant="10" id="e3i-HX-Pya"/>
                             <constraint firstItem="73D-xT-M3d" firstAttribute="leading" secondItem="Tz0-GJ-XsH" secondAttribute="leading" constant="20" id="g3D-uC-e9P"/>
                             <constraint firstAttribute="trailing" secondItem="73D-xT-M3d" secondAttribute="trailing" constant="20" id="gtS-qE-I1B"/>
                             <constraint firstItem="73D-xT-M3d" firstAttribute="top" secondItem="Vx4-S6-h2k" secondAttribute="bottom" id="h2Q-qL-DnY"/>
                             <constraint firstItem="Hox-9Z-oI8" firstAttribute="top" secondItem="Kl3-ij-d1f" secondAttribute="bottom" constant="8" id="h7a-y2-DEl"/>
                             <constraint firstItem="Qtn-Tu-DuH" firstAttribute="top" secondItem="73D-xT-M3d" secondAttribute="bottom" constant="238" id="htg-En-bA7"/>
-                            <constraint firstAttribute="trailing" secondItem="o7f-DL-tst" secondAttribute="trailing" id="jWu-sR-lsL"/>
                             <constraint firstItem="kT6-dv-jiK" firstAttribute="top" secondItem="Vx4-S6-h2k" secondAttribute="bottom" constant="10" id="nll-2g-yJR"/>
                             <constraint firstItem="73D-xT-M3d" firstAttribute="top" secondItem="kT6-dv-jiK" secondAttribute="bottom" constant="10" id="vR9-zX-HLS"/>
                             <constraint firstItem="Kl3-ij-d1f" firstAttribute="top" secondItem="EOW-dd-FqK" secondAttribute="bottom" constant="14" id="zI7-q0-Z5b"/>
@@ -437,7 +412,6 @@
                                 <exclude reference="h2Q-qL-DnY"/>
                                 <exclude reference="zI7-q0-Z5b"/>
                                 <exclude reference="h7a-y2-DEl"/>
-                                <exclude reference="Y6l-lF-6cl"/>
                                 <exclude reference="htg-En-bA7"/>
                             </mask>
                         </variation>
@@ -450,10 +424,24 @@
                             </mask>
                             <mask key="constraints">
                                 <include reference="h2Q-qL-DnY"/>
-                                <include reference="Y6l-lF-6cl"/>
                             </mask>
                         </variation>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem systemItem="play" id="VVN-yh-dYr">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="didSelectPlayButton:" destination="j4i-ad-Rgj" id="E7Z-Mt-iZC"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="wwn-TR-tLH"/>
+                        <barButtonItem systemItem="action" id="dAz-DK-0Ti">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="didSelectMoreActionsButton:" destination="j4i-ad-Rgj" id="SPN-W9-R2O"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <connections>
                         <outlet property="genreLabel" destination="EOW-dd-FqK" id="UYI-2Z-cji"/>
                         <outlet property="imageView" destination="73D-xT-M3d" id="xnC-OV-qdp"/>

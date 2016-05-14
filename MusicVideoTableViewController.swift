@@ -108,7 +108,7 @@ class MusicVideoTableViewController: UITableViewController {
 
     private struct storyboardId {
         static let cellId = "cell"
-        static let detailsSegue = "DetailViewController"
+        static let detailsSegue = "DetailsViewController"
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
