@@ -50,9 +50,29 @@ class DetailsViewController: UIViewController {
     @IBAction func didSelectMoreActionsButton(sender: AnyObject) {
         print(didSelectMoreActionsButton)
         
+        shareMedia()
+    }
+    
+    func shareMedia()  {
+        print("share Media")
+        let string1 = "Look at this video!"
+        let string2 = "\(video.name) by \(video.artist)"
+        let string3 = video.iTunesLink
+        
+        let activityController : UIActivityViewController = UIActivityViewController(activityItems: [string1, string2, string3], applicationActivities: nil)
+        activityController.completionWithItemsHandler = {
+        (activity, success, items, error) in
+            if activity == UIActivityTypeMail {
+                print("mail selected")
+            }
+        }
+        
+        self.presentViewController(activityController, animated: true, completion: nil)
     }
 
 } // end class
+
+
 
 
 
