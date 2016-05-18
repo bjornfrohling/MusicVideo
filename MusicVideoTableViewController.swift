@@ -158,8 +158,8 @@ class MusicVideoTableViewController: UITableViewController, UISearchResultsUpdat
 		}
 		else {
 			runApi()
-			sender.endRefreshing()
 		}
+        sender.endRefreshing()
 	}
 
 	func apiQueryCount () {
