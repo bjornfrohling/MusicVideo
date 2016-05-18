@@ -39,7 +39,16 @@ class Video {
 		if let imgArray = data["im:image"] as? JSONArray,
 			imgDict = imgArray[2] as? JSONDictionary,
 			imgUrl = imgDict["label"] as? String {
-				self._imageUrl = imgUrl.stringByReplacingOccurrencesOfString("100x100", withString: "600x600")
+
+				let useHighResolution = NSUserDefaults.standardUserDefaults().boolForKey("qualitySwitch")
+				let resolution: String
+				if useHighResolution {
+					resolution = "600x600"
+				}
+				else {
+					resolution = "300x300"
+				}
+				self._imageUrl = imgUrl.stringByReplacingOccurrencesOfString("100x100", withString: resolution)
 		}
 		else {
 			self._imageUrl = ""
