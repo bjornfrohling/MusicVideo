@@ -62,15 +62,8 @@ class MusicVideoTableViewController: UITableViewController, UISearchResultsUpdat
 			let okAction = UIAlertAction(title: "Ok", style: .Default, handler: { (UIAlertAction) in
 				print("Ok action")
 			})
-			let cancelAction = UIAlertAction(title: "Cancel", style: .Default, handler: { (UIAlertAction) in
-				print("cancel action")
-			})
-			let deleteAction = UIAlertAction(title: "Delete", style: .Destructive, handler: { (UIAlertAction) in
-				print("delete action")
-			})
 			alert.addAction(okAction)
-			alert.addAction(cancelAction)
-			alert.addAction(deleteAction)
+
 			self.presentViewController(alert, animated: true, completion: { })
 			break
 		case WIFI:
