@@ -8,15 +8,13 @@
 
 import UIKit
 
-class MusicVideoTableViewController: UITableViewController {
+class MusicVideoTableViewController: UITableViewController, UISearchResultsUpdating {
 
     var videos = [Video]()
     var filterSearch = [Video]()
-    
+    var queryLimit = 10
     let resultSearchCtrl = UISearchController(searchResultsController: nil)
 
-    var queryLimit = 10
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +45,7 @@ class MusicVideoTableViewController: UITableViewController {
         self.videos = videos
         self.filterSearch = videos
         // Setup Search
-        //resultSearchCtrl.searchResultsUpdater = self
+        resultSearchCtrl.searchResultsUpdater = self
         definesPresentationContext = true
         resultSearchCtrl.dimsBackgroundDuringPresentation = false
         resultSearchCtrl.searchBar.placeholder = "Search"
@@ -97,11 +95,6 @@ class MusicVideoTableViewController: UITableViewController {
         // Call API
         let api = APIManager()
         api.loadData("https://itunes.apple.com/us/rss/topmusicvideos/limit=\(queryLimit)/json", completion: didLoadData)
-        
-        let formatter = NSDateFormatter()
-        formatter.dateFormat = "E, dd MMM yyyy HH:mm:ss"
-        let refreshDate = formatter.stringFromDate(NSDate())
-        refreshControl?.attributedTitle = NSAttributedString(string: "\(refreshDate)")
     }
     
     deinit {
@@ -163,9 +156,18 @@ class MusicVideoTableViewController: UITableViewController {
     
     @IBAction func refresh(sender: UIRefreshControl) {
         refreshControl?.endRefreshing()
-        runApi()
+        if resultSearchCtrl.active {
+            refreshControl?.attributedTitle = NSAttributedString(string:"No refresh while search")
+        }
+        else {
+            let formatter = NSDateFormatter()
+            formatter.dateFormat = "E, dd MMM yyyy HH:mm:ss"
+            let refreshDate = formatter.stringFromDate(NSDate())
+            refreshControl?.attributedTitle = NSAttributedString(string: "\(refreshDate)")
+            
+            runApi()
+        }
     }
-    
     
     func apiQueryCount ()  {
         let defaults = NSUserDefaults.standardUserDefaults()
@@ -175,6 +177,19 @@ class MusicVideoTableViewController: UITableViewController {
         else {
             queryLimit = 10
         }
+    }
+    
+    // MARK: - Search
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        searchController.searchBar.text!.lowercaseString
+        filteredSearch(searchController.searchBar.text!)
+    }
+    
+    func filteredSearch(searchText: String)  {
+        filterSearch = videos.filter { videos in
+            return videos.artist.lowercaseString.containsString(searchText.lowercaseString)
+        }
+        tableView.reloadData()
     }
 }
 
