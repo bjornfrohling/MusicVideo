@@ -63,16 +63,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DE491ED51CD9062300F60847 /* MusicVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE491ED51CD9062300F60847 /* ITunesVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ITunesVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE491ED81CD9062300F60847 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE491EDD1CD9062300F60847 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE491EDF1CD9062300F60847 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE491EE21CD9062300F60847 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE491EE41CD9062300F60847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE491EE91CD9062300F60847 /* MusicVideoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicVideoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE491EE91CD9062300F60847 /* ITunesVideo.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ITunesVideo.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE491EED1CD9062300F60847 /* MusicVideoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicVideoTests.swift; sourceTree = "<group>"; };
 		DE491EEF1CD9062300F60847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE491EF41CD9062300F60847 /* MusicVideoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicVideoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE491EF41CD9062300F60847 /* ITunesVideo.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ITunesVideo.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE491EF81CD9062300F60847 /* MusicVideoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicVideoUITests.swift; sourceTree = "<group>"; };
 		DE491EFA1CD9062300F60847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE491F091CD9147B00F60847 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -125,9 +125,9 @@
 		DE491ED61CD9062300F60847 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DE491ED51CD9062300F60847 /* MusicVideo.app */,
-				DE491EE91CD9062300F60847 /* MusicVideoTests.xctest */,
-				DE491EF41CD9062300F60847 /* MusicVideoUITests.xctest */,
+				DE491ED51CD9062300F60847 /* ITunesVideo.app */,
+				DE491EE91CD9062300F60847 /* ITunesVideo.xctest */,
+				DE491EF41CD9062300F60847 /* ITunesVideo.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -231,9 +231,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DE491ED41CD9062300F60847 /* MusicVideo */ = {
+		DE491ED41CD9062300F60847 /* ITunesVideo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DE491EFD1CD9062300F60847 /* Build configuration list for PBXNativeTarget "MusicVideo" */;
+			buildConfigurationList = DE491EFD1CD9062300F60847 /* Build configuration list for PBXNativeTarget "ITunesVideo" */;
 			buildPhases = (
 				DE491ED11CD9062300F60847 /* Sources */,
 				DE491ED21CD9062300F60847 /* Frameworks */,
@@ -243,14 +243,14 @@
 			);
 			dependencies = (
 			);
-			name = MusicVideo;
+			name = ITunesVideo;
 			productName = MusicVideo;
-			productReference = DE491ED51CD9062300F60847 /* MusicVideo.app */;
+			productReference = DE491ED51CD9062300F60847 /* ITunesVideo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DE491EE81CD9062300F60847 /* MusicVideoTests */ = {
+		DE491EE81CD9062300F60847 /* ITunesVideoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DE491F001CD9062300F60847 /* Build configuration list for PBXNativeTarget "MusicVideoTests" */;
+			buildConfigurationList = DE491F001CD9062300F60847 /* Build configuration list for PBXNativeTarget "ITunesVideoTests" */;
 			buildPhases = (
 				DE491EE51CD9062300F60847 /* Sources */,
 				DE491EE61CD9062300F60847 /* Frameworks */,
@@ -261,14 +261,14 @@
 			dependencies = (
 				DE491EEB1CD9062300F60847 /* PBXTargetDependency */,
 			);
-			name = MusicVideoTests;
+			name = ITunesVideoTests;
 			productName = MusicVideoTests;
-			productReference = DE491EE91CD9062300F60847 /* MusicVideoTests.xctest */;
+			productReference = DE491EE91CD9062300F60847 /* ITunesVideo.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DE491EF31CD9062300F60847 /* MusicVideoUITests */ = {
+		DE491EF31CD9062300F60847 /* ITunesVideoUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DE491F031CD9062300F60847 /* Build configuration list for PBXNativeTarget "MusicVideoUITests" */;
+			buildConfigurationList = DE491F031CD9062300F60847 /* Build configuration list for PBXNativeTarget "ITunesVideoUITests" */;
 			buildPhases = (
 				DE491EF01CD9062300F60847 /* Sources */,
 				DE491EF11CD9062300F60847 /* Frameworks */,
@@ -279,9 +279,9 @@
 			dependencies = (
 				DE491EF61CD9062300F60847 /* PBXTargetDependency */,
 			);
-			name = MusicVideoUITests;
+			name = ITunesVideoUITests;
 			productName = MusicVideoUITests;
-			productReference = DE491EF41CD9062300F60847 /* MusicVideoUITests.xctest */;
+			productReference = DE491EF41CD9062300F60847 /* ITunesVideo.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -307,7 +307,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DE491ED01CD9062300F60847 /* Build configuration list for PBXProject "MusicVideo" */;
+			buildConfigurationList = DE491ED01CD9062300F60847 /* Build configuration list for PBXProject "ITunesVideo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -320,9 +320,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DE491ED41CD9062300F60847 /* MusicVideo */,
-				DE491EE81CD9062300F60847 /* MusicVideoTests */,
-				DE491EF31CD9062300F60847 /* MusicVideoUITests */,
+				DE491ED41CD9062300F60847 /* ITunesVideo */,
+				DE491EE81CD9062300F60847 /* ITunesVideoTests */,
+				DE491EF31CD9062300F60847 /* ITunesVideoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -414,12 +414,12 @@
 /* Begin PBXTargetDependency section */
 		DE491EEB1CD9062300F60847 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DE491ED41CD9062300F60847 /* MusicVideo */;
+			target = DE491ED41CD9062300F60847 /* ITunesVideo */;
 			targetProxy = DE491EEA1CD9062300F60847 /* PBXContainerItemProxy */;
 		};
 		DE491EF61CD9062300F60847 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DE491ED41CD9062300F60847 /* MusicVideo */;
+			target = DE491ED41CD9062300F60847 /* ITunesVideo */;
 			targetProxy = DE491EF51CD9062300F60847 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -537,7 +537,7 @@
 				INFOPLIST_FILE = MusicVideo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.MusicVideo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ITunesVideo;
 				SWIFT_OBJC_BRIDGING_HEADER = "MusicVideo/MusicVideo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -551,7 +551,7 @@
 				INFOPLIST_FILE = MusicVideo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.MusicVideo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ITunesVideo;
 				SWIFT_OBJC_BRIDGING_HEADER = "MusicVideo/MusicVideo-Bridging-Header.h";
 			};
 			name = Release;
@@ -563,8 +563,8 @@
 				INFOPLIST_FILE = MusicVideoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.MusicVideoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MusicVideo.app/MusicVideo";
+				PRODUCT_NAME = ITunesVideo;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ITunesVideo.app/ITunesVideo";
 			};
 			name = Debug;
 		};
@@ -575,8 +575,8 @@
 				INFOPLIST_FILE = MusicVideoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.MusicVideoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MusicVideo.app/MusicVideo";
+				PRODUCT_NAME = ITunesVideo;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ITunesVideo.app/ITunesVideo";
 			};
 			name = Release;
 		};
@@ -586,7 +586,7 @@
 				INFOPLIST_FILE = MusicVideoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.MusicVideoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ITunesVideo;
 				TEST_TARGET_NAME = MusicVideo;
 			};
 			name = Debug;
@@ -597,7 +597,7 @@
 				INFOPLIST_FILE = MusicVideoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.MusicVideoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ITunesVideo;
 				TEST_TARGET_NAME = MusicVideo;
 			};
 			name = Release;
@@ -605,7 +605,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DE491ED01CD9062300F60847 /* Build configuration list for PBXProject "MusicVideo" */ = {
+		DE491ED01CD9062300F60847 /* Build configuration list for PBXProject "ITunesVideo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DE491EFB1CD9062300F60847 /* Debug */,
@@ -614,7 +614,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DE491EFD1CD9062300F60847 /* Build configuration list for PBXNativeTarget "MusicVideo" */ = {
+		DE491EFD1CD9062300F60847 /* Build configuration list for PBXNativeTarget "ITunesVideo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DE491EFE1CD9062300F60847 /* Debug */,
@@ -623,7 +623,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DE491F001CD9062300F60847 /* Build configuration list for PBXNativeTarget "MusicVideoTests" */ = {
+		DE491F001CD9062300F60847 /* Build configuration list for PBXNativeTarget "ITunesVideoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DE491F011CD9062300F60847 /* Debug */,
@@ -632,7 +632,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DE491F031CD9062300F60847 /* Build configuration list for PBXNativeTarget "MusicVideoUITests" */ = {
+		DE491F031CD9062300F60847 /* Build configuration list for PBXNativeTarget "ITunesVideoUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DE491F041CD9062300F60847 /* Debug */,

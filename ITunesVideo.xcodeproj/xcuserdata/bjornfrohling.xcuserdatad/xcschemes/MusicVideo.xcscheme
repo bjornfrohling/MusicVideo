@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DE491ED41CD9062300F60847"
-               BuildableName = "MusicVideo.app"
-               BlueprintName = "MusicVideo"
-               ReferencedContainer = "container:MusicVideo.xcodeproj">
+               BuildableName = "ITunesVideo.app"
+               BlueprintName = "ITunesVideo"
+               ReferencedContainer = "container:ITunesVideo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DE491EE81CD9062300F60847"
-               BuildableName = "MusicVideoTests.xctest"
-               BlueprintName = "MusicVideoTests"
-               ReferencedContainer = "container:MusicVideo.xcodeproj">
+               BuildableName = "ITunesVideo.xctest"
+               BlueprintName = "ITunesVideoTests"
+               ReferencedContainer = "container:ITunesVideo.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DE491EF31CD9062300F60847"
-               BuildableName = "MusicVideoUITests.xctest"
-               BlueprintName = "MusicVideoUITests"
-               ReferencedContainer = "container:MusicVideo.xcodeproj">
+               BuildableName = "ITunesVideo.xctest"
+               BlueprintName = "ITunesVideoUITests"
+               ReferencedContainer = "container:ITunesVideo.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DE491ED41CD9062300F60847"
-            BuildableName = "MusicVideo.app"
-            BlueprintName = "MusicVideo"
-            ReferencedContainer = "container:MusicVideo.xcodeproj">
+            BuildableName = "ITunesVideo.app"
+            BlueprintName = "ITunesVideo"
+            ReferencedContainer = "container:ITunesVideo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DE491ED41CD9062300F60847"
-            BuildableName = "MusicVideo.app"
-            BlueprintName = "MusicVideo"
-            ReferencedContainer = "container:MusicVideo.xcodeproj">
+            BuildableName = "ITunesVideo.app"
+            BlueprintName = "ITunesVideo"
+            ReferencedContainer = "container:ITunesVideo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DE491ED41CD9062300F60847"
-            BuildableName = "MusicVideo.app"
-            BlueprintName = "MusicVideo"
-            ReferencedContainer = "container:MusicVideo.xcodeproj">
+            BuildableName = "ITunesVideo.app"
+            BlueprintName = "ITunesVideo"
+            ReferencedContainer = "container:ITunesVideo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
