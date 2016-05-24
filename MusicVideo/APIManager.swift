@@ -27,38 +27,37 @@ class APIManager: NSObject {
 			else {
 
 				print(data)
+				let priority = DISPATCH_QUEUE_PRIORITY_HIGH
+				dispatch_async(dispatch_get_global_queue(priority, 0), {
+                    
+					do {
+						if let jsonDict = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
+						as? JSONDictionary,
+							feedDict = jsonDict["feed"] as? JSONDictionary,
+							entriesArray = feedDict["entry"] as? JSONArray
+						{
 
-				do {
+							var videos = [Video]()
+							for (index, entry) in entriesArray.enumerate() {
+								let video = Video(data: entry as! JSONDictionary)
+								video.rank = index + 1
+								videos.append(video)
+							}
 
-					if let jsonDict = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
-					as? JSONDictionary,
-						feedDict = jsonDict["feed"] as? JSONDictionary,
-						entriesArray = feedDict["entry"] as? JSONArray
-					{
-
-						var videos = [Video]()
-						for (index, entry) in entriesArray.enumerate() {
-							let video = Video(data: entry as! JSONDictionary)
-							video.rank = index + 1
-							videos.append(video)
-						}
-
-						let videoCount = videos.count
-						print("total video count \(videoCount)")
-
-						let priority = DISPATCH_QUEUE_PRIORITY_HIGH
-						dispatch_async(dispatch_get_global_queue(priority, 0), {
+							let videoCount = videos.count
+							print("total video count \(videoCount)")
 
 							dispatch_async(dispatch_get_main_queue(), {
 								completion(videos)
 							})
-						})
+
+						}
 
 					}
-				}
-				catch {
-					print("JSONSerialization error")
-				}
+					catch {
+						print("JSONSerialization error")
+					}
+				})
 
 			}
 
