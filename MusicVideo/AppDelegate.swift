@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Global variables
 var reachability: Reachability?
 var reachabilityStatus: String = ""
 
@@ -15,7 +16,7 @@ var reachabilityStatus: String = ""
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
-	var internetCheck: Reachability?
+	private var internetCheck: Reachability?
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
@@ -55,7 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		statusChangedWithReachability(reachability!)
 	}
 
-	func statusChangedWithReachability(currentReachability: Reachability) -> Void {
+	private func statusChangedWithReachability(currentReachability: Reachability) -> Void {
 		let networkStatus: NetworkStatus = currentReachability.currentReachabilityStatus()
 		reachability = currentReachability
 

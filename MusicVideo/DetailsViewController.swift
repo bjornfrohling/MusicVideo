@@ -18,8 +18,9 @@ class DetailsViewController: UIViewController {
 	@IBOutlet weak var genreLabel: UILabel!
 	@IBOutlet weak var priceLabel: UILabel!
 	@IBOutlet weak var rightsLabel: UILabel!
-	var securitySwitchValue: Bool = false
-
+    
+	private var securitySwitchValue: Bool = false
+    
 	var video: Video!
 
 	override func viewDidLoad() {
@@ -62,7 +63,7 @@ class DetailsViewController: UIViewController {
 		}
 	}
 
-	func shareMedia() {
+	private func shareMedia() {
 		print("share Media")
 		let string1 = "Look at this video!"
 		let string2 = "\(video.name) by \(video.artist)"
@@ -79,7 +80,7 @@ class DetailsViewController: UIViewController {
 		self.presentViewController(activityController, animated: true, completion: nil)
 	}
 
-	func touchIdCheck() {
+	private func touchIdCheck() {
 		print("touchIdCheck")
 
 		let alert = UIAlertController(title: "", message: "", preferredStyle: UIAlertControllerStyle.Alert)

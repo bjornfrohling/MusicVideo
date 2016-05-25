@@ -76,7 +76,7 @@ class MusicVideoTableViewController: UITableViewController, UISearchResultsUpdat
 		runApi()
 	}
 
-	func runApi() {
+	private func runApi() {
 		let formatter = NSDateFormatter()
 		formatter.dateFormat = "E, dd MMM yyyy HH:mm:ss"
 		let refreshDate = formatter.stringFromDate(NSDate())
@@ -162,7 +162,7 @@ class MusicVideoTableViewController: UITableViewController, UISearchResultsUpdat
         sender.endRefreshing()
 	}
 
-	func apiQueryCount () {
+	private func apiQueryCount () {
 		let defaults = NSUserDefaults.standardUserDefaults()
 		if defaults.objectForKey("apiSlider") != nil {
 			queryLimit = defaults.objectForKey("apiSlider") as! Int
@@ -173,12 +173,12 @@ class MusicVideoTableViewController: UITableViewController, UISearchResultsUpdat
 	}
 
 	// MARK: - Search
-	func updateSearchResultsForSearchController(searchController: UISearchController) {
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
 		searchController.searchBar.text!.lowercaseString
 		filteredSearch(searchController.searchBar.text!)
 	}
 
-	func filteredSearch(searchText: String) {
+	private func filteredSearch(searchText: String) {
 		filterSearch = videos.filter { videos in
 			return videos.artist.lowercaseString.containsString(searchText.lowercaseString)
 		}

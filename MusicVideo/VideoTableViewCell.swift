@@ -13,6 +13,7 @@ class VideoTableViewCell: UITableViewCell {
 	@IBOutlet weak var videoImage: UIImageView!
 	@IBOutlet weak var topLabel: UILabel!
 	@IBOutlet weak var bottomLabel: UILabel!
+    
 	var video: Video? { didSet {
 		updateCell()
 		}
@@ -24,7 +25,7 @@ class VideoTableViewCell: UITableViewCell {
 		// Configure the view for the selected state
 	}
 
-	func updateCell() {
+	private func updateCell() {
 		topLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
 		bottomLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
 
@@ -39,7 +40,7 @@ class VideoTableViewCell: UITableViewCell {
 		}
 	}
 
-	func getVideoImage(video: Video, imageView: UIImageView) {
+	private func getVideoImage(video: Video, imageView: UIImageView) {
 		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
 			let imgData = NSData(contentsOfURL: NSURL(string: video.imageUrl)!)
 			var image: UIImage?

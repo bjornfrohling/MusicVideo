@@ -77,7 +77,7 @@ class SettingsViewController: UITableViewController, MFMailComposeViewController
 		tableView.deselectRowAtIndexPath(indexPath, animated: true)
 	}
 
-	func presentMail() {
+	private func presentMail() {
 		let mailComposeVC: MFMailComposeViewController = MFMailComposeViewController()
 		mailComposeVC.mailComposeDelegate = self
 		mailComposeVC.setSubject("App Feedback")
