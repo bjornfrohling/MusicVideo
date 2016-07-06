@@ -15,8 +15,6 @@
 		DE1594361CECE3B30074564D /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9DEEE81CDB881E00F0552F /* Contants.swift */; };
 		DE1594371CECE3B80074564D /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9DEEEA1CDB8A2700F0552F /* Video.swift */; };
 		DE1594381CECE3B90074564D /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9DEEEA1CDB8A2700F0552F /* Video.swift */; };
-		DE1594391CECE3BB0074564D /* MusicVideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECB56891CDE6039009117EB /* MusicVideoTableViewController.swift */; };
-		DE15943A1CECE3BC0074564D /* MusicVideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECB56891CDE6039009117EB /* MusicVideoTableViewController.swift */; };
 		DE15943B1CECE3BE0074564D /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECB568C1CDE6CEF009117EB /* VideoTableViewCell.swift */; };
 		DE15943C1CECE3BF0074564D /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECB568C1CDE6CEF009117EB /* VideoTableViewCell.swift */; };
 		DE15943D1CECE3C10074564D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4D18691CE24E6100198D3A /* DetailsViewController.swift */; };
@@ -40,7 +38,7 @@
 		DE5D50AF1CE630BB00DB7E05 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D50AE1CE630BB00DB7E05 /* SettingsViewController.swift */; };
 		DE9DEEE91CDB881E00F0552F /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9DEEE81CDB881E00F0552F /* Contants.swift */; };
 		DE9DEEEB1CDB8A2700F0552F /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9DEEEA1CDB8A2700F0552F /* Video.swift */; };
-		DECB568A1CDE6039009117EB /* MusicVideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECB56891CDE6039009117EB /* MusicVideoTableViewController.swift */; };
+		DEC0DFDE1D2D5CED00CDF227 /* MusicVideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC0DFDD1D2D5CED00CDF227 /* MusicVideoTableViewController.swift */; };
 		DECB568D1CDE6CEF009117EB /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECB568C1CDE6CEF009117EB /* VideoTableViewCell.swift */; };
 		DEEE20751CDD01D800BF675B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEE20731CDD01D800BF675B /* Reachability.m */; };
 /* End PBXBuildFile section */
@@ -80,7 +78,7 @@
 		DE5D50AE1CE630BB00DB7E05 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DE9DEEE81CDB881E00F0552F /* Contants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
 		DE9DEEEA1CDB8A2700F0552F /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
-		DECB56891CDE6039009117EB /* MusicVideoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		DEC0DFDD1D2D5CED00CDF227 /* MusicVideoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoTableViewController.swift; sourceTree = "<group>"; };
 		DECB568C1CDE6CEF009117EB /* VideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		DEEE20721CDD01D700BF675B /* MusicVideo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicVideo-Bridging-Header.h"; sourceTree = "<group>"; };
 		DEEE20731CDD01D800BF675B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
@@ -168,7 +166,7 @@
 		DE491F061CD9096200F60847 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DECB56891CDE6039009117EB /* MusicVideoTableViewController.swift */,
+				DEC0DFDD1D2D5CED00CDF227 /* MusicVideoTableViewController.swift */,
 				DECB568C1CDE6CEF009117EB /* VideoTableViewCell.swift */,
 				DE4D18691CE24E6100198D3A /* DetailsViewController.swift */,
 				DE5D50AE1CE630BB00DB7E05 /* SettingsViewController.swift */,
@@ -367,9 +365,9 @@
 				DE491ED91CD9062300F60847 /* AppDelegate.swift in Sources */,
 				DECB568D1CDE6CEF009117EB /* VideoTableViewCell.swift in Sources */,
 				DE4D186A1CE24E6100198D3A /* DetailsViewController.swift in Sources */,
-				DECB568A1CDE6039009117EB /* MusicVideoTableViewController.swift in Sources */,
 				DE9DEEE91CDB881E00F0552F /* Contants.swift in Sources */,
 				DEEE20751CDD01D800BF675B /* Reachability.m in Sources */,
+				DEC0DFDE1D2D5CED00CDF227 /* MusicVideoTableViewController.swift in Sources */,
 				DE9DEEEB1CDB8A2700F0552F /* Video.swift in Sources */,
 				DE5D50AF1CE630BB00DB7E05 /* SettingsViewController.swift in Sources */,
 			);
@@ -384,7 +382,6 @@
 				DE15943D1CECE3C10074564D /* DetailsViewController.swift in Sources */,
 				DE15943F1CECE3C40074564D /* SettingsViewController.swift in Sources */,
 				DE491F0B1CD9147B00F60847 /* APIManager.swift in Sources */,
-				DE1594391CECE3BB0074564D /* MusicVideoTableViewController.swift in Sources */,
 				DE1594351CECE3B20074564D /* Contants.swift in Sources */,
 				DE15943B1CECE3BE0074564D /* VideoTableViewCell.swift in Sources */,
 				DE1594331CECE3AD0074564D /* Reachability.m in Sources */,
@@ -401,7 +398,6 @@
 				DE15943E1CECE3C20074564D /* DetailsViewController.swift in Sources */,
 				DE1594401CECE3C50074564D /* SettingsViewController.swift in Sources */,
 				DE491F0C1CD9147B00F60847 /* APIManager.swift in Sources */,
-				DE15943A1CECE3BC0074564D /* MusicVideoTableViewController.swift in Sources */,
 				DE1594361CECE3B30074564D /* Contants.swift in Sources */,
 				DE15943C1CECE3BF0074564D /* VideoTableViewCell.swift in Sources */,
 				DE1594341CECE3AE0074564D /* Reachability.m in Sources */,
