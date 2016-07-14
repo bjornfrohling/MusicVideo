@@ -29,7 +29,7 @@ class VideoTableViewCell: UITableViewCell {
 		topLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
 		bottomLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
 
-		topLabel.text = ("\(video!.rank)")
+		topLabel.text = ("\(video!.rank). \(video!.artist)")
 		bottomLabel.text = video?.name
 		if video!.imageData != nil {
 			videoImage.image = UIImage(data: video!.imageData!)
