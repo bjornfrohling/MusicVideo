@@ -179,8 +179,8 @@ class MusicVideoTableViewController: UITableViewController, UISearchResultsUpdat
 	}
 
 	private func filteredSearch(searchText: String) {
-		filterSearch = videos.filter { videos in
-			return videos.artist.lowercaseString.containsString(searchText.lowercaseString)
+		filterSearch = videos.filter { video in
+			return video.artist.lowercaseString.containsString(searchText.lowercaseString)
 		}
 		tableView.reloadData()
 	}
