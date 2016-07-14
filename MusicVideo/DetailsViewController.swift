@@ -29,7 +29,7 @@ class DetailsViewController: UIViewController {
 		self.title = video.artist
 		topLabel.text = video.name
 		genreLabel.text = video.genre
-		rightsLabel.text = video.right
+		rightsLabel.text = video.rights
 		priceLabel.text = video.price
 
 		if video.imageData != nil {

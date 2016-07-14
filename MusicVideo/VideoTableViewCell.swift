@@ -13,7 +13,7 @@ class VideoTableViewCell: UITableViewCell {
 	@IBOutlet weak var videoImage: UIImageView!
 	@IBOutlet weak var topLabel: UILabel!
 	@IBOutlet weak var bottomLabel: UILabel!
-    
+
 	var video: Video? { didSet {
 		updateCell()
 		}
